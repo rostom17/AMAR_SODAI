@@ -12,7 +12,7 @@ class HomeScreenAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 32.h, right: 16.h, left: 16.h),
-      color: AppColors.backgroundColor,
+      decoration: BoxDecoration(color: AppColors.backgroundColor),
       child: Column(
         children: [
           Row(

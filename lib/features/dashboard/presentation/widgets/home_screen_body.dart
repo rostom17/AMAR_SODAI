@@ -45,6 +45,36 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         ),
         SizedBox(height: 16.h),
         Text("Categories", style: Theme.of(context).textTheme.titleLarge),
+        SizedBox(height: 16.h),
+        SizedBox(
+          height: 100.h,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: DummyData.categories.length,
+            itemBuilder: (context, index) {
+              final item = DummyData.categories[index];
+              return Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Container(
+                  height: 90.h,
+                  width: 75.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    image: DecorationImage(
+                      image: CachedNetworkImageProvider(
+                        item["image"],
+                        cacheKey: item["image"],
+                      ),
+                      fit: BoxFit.cover,
+                      onError: (exception, stackTrace) =>
+                          Center(child: Icon(Icons.error)),
+                    ),
+                  ),
+                ),
+              );
+            },
+          ),
+        ),
       ],
     );
   }
