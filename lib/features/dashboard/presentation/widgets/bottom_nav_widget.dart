@@ -1,5 +1,6 @@
 import 'package:amar_sodai/core/constants/app_strings.dart';
 import 'package:amar_sodai/features/dashboard/presentation/bloc/bottom_nav_cubit.dart';
+import 'package:amar_sodai/features/dashboard/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,11 +8,7 @@ class BottomNavWidget extends StatelessWidget {
   BottomNavWidget({super.key});
 
   final List<Widget> _screens = [
-    Container(
-      height: double.maxFinite,
-      width: double.maxFinite,
-      color: const Color.fromARGB(255, 139, 134, 117),
-    ),
+    HomeScreen(),
     Container(
       height: double.maxFinite,
       width: double.maxFinite,
@@ -72,7 +69,7 @@ class BottomNavWidget extends StatelessWidget {
     final bool isSelected = itemIndex == currentIndex;
     return BottomNavigationBarItem(
       icon: ImageIcon(
-        AssetImage(isSelected ? selectedIconPath : unSelectedIconpath),
+        AssetImage(isSelected ? selectedIconPath : unSelectedIconpath,), 
       ),
       label: label,
     );

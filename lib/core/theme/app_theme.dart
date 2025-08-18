@@ -6,8 +6,16 @@ class AppTheme {
     return ThemeData.light().copyWith(
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         selectedItemColor: AppColors.backgroundColor,
-
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.w900),
+      ),
+
+      searchBarTheme: SearchBarThemeData(
+        padding: WidgetStatePropertyAll(EdgeInsets.symmetric(horizontal: 16)),
+        elevation: WidgetStateProperty.all(0),
+      ),
+
+      textTheme: TextTheme(
+        titleLarge: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
       ),
     );
   }

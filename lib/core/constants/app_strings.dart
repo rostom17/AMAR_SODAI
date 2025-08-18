@@ -8,4 +8,8 @@ class AppStrings {
   static const String categoriesIcon = "assets/icons/categories.png";
   static const String categoriesIconFilled =
       "assets/icons/categories_filled.png";
+
+  static const String notificationIconFilled =
+      "assets/icons/notification_filled.png";
+  static const String notificationIcon = "assets/icons/notification.png";
 }
