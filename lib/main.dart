@@ -1,6 +1,7 @@
 import 'package:amar_sodai/core/router/app_routes.dart';
 import 'package:amar_sodai/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(AmarSodai());
@@ -11,12 +12,17 @@ class AmarSodai extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme(),
-      darkTheme: AppTheme.darkTheme(),
-      themeMode: ThemeMode.system,
-      routerConfig: AppRoutes.router,
+    return ScreenUtilInit(
+      designSize: const Size(411, 914),
+      builder: (_, child) {
+        return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.lightTheme(),
+          darkTheme: AppTheme.darkTheme(),
+          themeMode: ThemeMode.system,
+          routerConfig: AppRoutes.router,
+        );
+      },
     );
   }
 }
