@@ -3,6 +3,7 @@ import 'package:amar_sodai/features/common/presentation/widgets/custom_back_butt
 import 'package:amar_sodai/features/common/presentation/widgets/custom_notification_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -12,30 +13,31 @@ class CartScreen extends StatelessWidget {
     return Column(
       children: [
         Container(
-      padding: EdgeInsets.only(top: 32.h, right: 16.h, left: 16.h),
-      decoration: BoxDecoration(color: AppColors.backgroundColor),
-      child: Column(
-        children: [
-          Row(
+          padding: EdgeInsets.only(top: 32.h, right: 16.h, left: 16.h),
+          decoration: BoxDecoration(color: AppColors.backgroundColor),
+          child: Column(
             children: [
-              CustomBackButton(onTap: () {}),
-              const Spacer(),
-              Text(
-                "Cart",
-                style: TextStyle(
-                  fontSize: 18.h,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
+              Row(
+                children: [
+                  CustomBackButton(onTap: () {}),
+                  const Spacer(),
+                  Text(
+                    "Cart",
+                    style: TextStyle(
+                      fontSize: 18.h,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const Spacer(),
+                  CustomNotificationButton(onTap: () {}),
+                ],
               ),
-              const Spacer(),
-              CustomNotificationButton(onTap: () {}),
+              SizedBox(height: 16.h),
             ],
           ),
-          SizedBox(height: 16.h),
-        ],
-      ),
-    )
+        ),
+        Center(child: Lottie.asset("assets/lotties/empty.json")),
       ],
     );
   }
