@@ -29,12 +29,12 @@ class DummyData {
     {
       "name": "Fillets",
       "image":
-          "https://png.pngtree.com/png-clipart/20200701/original/pngtree-seafood-snapper-png-image_5427581.jpg",
+          "https://e7.pngegg.com/pngimages/437/581/png-clipart-two-sliced-salmons-salmon-fillets-food-seafood-thumbnail.png",
     },
     {
       "name": "Chicken",
       "image":
-          "https://png.pngtree.com/png-clipart/20240318/original/pngtree-cooked-chicken-png-png-image_14615314.png",
+          "https://w7.pngwing.com/pngs/885/426/png-transparent-fried-chicken-roast-chicken-barbecue-chicken-fried-chicken-barbecue-food-recipe-thumbnail.png",
     },
     {
       "name": "Ducks",
@@ -44,7 +44,7 @@ class DummyData {
     {
       "name": "Beef",
       "image":
-          "https://png.pngtree.com/png-clipart/20240308/original/pngtree-stew-cooked-meat-png-image_14543370.png",
+          "https://img.freepik.com/free-psd/fresh-beef-cubes-with-rosemary-culinary-delight_191095-78514.jpg",
     },
     {
       "name": "Mutton",
@@ -54,12 +54,12 @@ class DummyData {
     {
       "name": "Pasta",
       "image":
-          "https://png.pngtree.com/png-vector/20250513/ourmid/pngtree-bowl-of-tricolor-pasta-with-vegetables-and-basil-for-italian-food-png-image_16260167.png",
+          "https://img.freepik.com/free-psd/delicious-spaghetti-bolognese-with-cherry-tomatoes-basil_191095-79432.jpg?semt=ais_hybrid&w=740&q=80",
     },
     {
       "name": "Fast-Food",
       "image":
-          "https://png.pngtree.com/png-clipart/20240103/original/pngtree-group-of-fast-food-products-png-image_14008130.png",
+          "https://img.freepik.com/free-vector/fast-food-meal-vector-illustration_1308-167988.jpg",
     },
     {
       "name": "Spices",
@@ -69,7 +69,7 @@ class DummyData {
     {
       "name": "Combo-Pack",
       "image":
-          "https://png.pngtree.com/png-clipart/20210905/original/pngtree-combo-offer-poster-png-image_6690799.jpg",
+          "https://freepngimg.com/save/152991-food-junk-combo-hd-image-free/1783x784",
     },
   ];
 }

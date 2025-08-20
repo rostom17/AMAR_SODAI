@@ -16,6 +16,16 @@ class AppTheme {
 
       textTheme: TextTheme(
         titleLarge: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+        bodyMedium: TextStyle(fontSize: 14, color: Colors.black),
+      ),
+
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          visualDensity: VisualDensity(vertical: 0),
+          padding: EdgeInsets.zero,
+          foregroundColor: AppColors.backgroundColor2,
+          textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+        ),
       ),
     );
   }

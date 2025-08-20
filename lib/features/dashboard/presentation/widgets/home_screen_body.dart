@@ -1,4 +1,6 @@
+import 'package:amar_sodai/core/theme/app_colors.dart';
 import 'package:amar_sodai/core/utls/dummy_data.dart';
+import 'package:amar_sodai/features/dashboard/presentation/widgets/home_screen_category_card.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,33 +49,30 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         Text("Categories", style: Theme.of(context).textTheme.titleLarge),
         SizedBox(height: 16.h),
         SizedBox(
-          height: 100.h,
+          height: 115.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: DummyData.categories.length,
             itemBuilder: (context, index) {
               final item = DummyData.categories[index];
               return Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Container(
-                  height: 90.h,
-                  width: 75.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    image: DecorationImage(
-                      image: CachedNetworkImageProvider(
-                        item["image"],
-                        cacheKey: item["image"],
-                      ),
-                      fit: BoxFit.cover,
-                      onError: (exception, stackTrace) =>
-                          Center(child: Icon(Icons.error)),
-                    ),
-                  ),
-                ),
+                padding: const EdgeInsets.only(right: 8),
+                child: HomescreenCategoryCard(item: item),
               );
             },
           ),
+        ),
+        SizedBox(height: 16.h),
+        Row(
+          children: [
+            Text("Best Deals", style: Theme.of(context).textTheme.titleLarge),
+            const Spacer(),
+            TextButton(
+              
+              onPressed: () {},
+              child: Text("See All"),
+            ),
+          ],
         ),
       ],
     );
