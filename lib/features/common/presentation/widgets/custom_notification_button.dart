@@ -1,4 +1,3 @@
-import 'package:amar_sodai/core/constants/app_strings.dart';
 import 'package:amar_sodai/core/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

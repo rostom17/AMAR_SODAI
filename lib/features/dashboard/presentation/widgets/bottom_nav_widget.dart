@@ -1,5 +1,6 @@
 import 'package:amar_sodai/core/constants/app_strings.dart';
 import 'package:amar_sodai/core/theme/app_colors.dart';
+import 'package:amar_sodai/features/categories/presentation/screens/category_screen.dart';
 import 'package:amar_sodai/features/dashboard/presentation/bloc/bottom_nav_cubit.dart';
 import 'package:amar_sodai/features/dashboard/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -11,11 +12,7 @@ class BottomNavWidget extends StatelessWidget {
 
   final List<Widget> _screens = [
     HomeScreen(),
-    Container(
-      height: double.maxFinite,
-      width: double.maxFinite,
-      color: Colors.pink,
-    ),
+    CategoryScreen(),
     Container(
       height: double.maxFinite,
       width: double.maxFinite,

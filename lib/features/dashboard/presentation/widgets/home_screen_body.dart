@@ -1,5 +1,5 @@
-import 'package:amar_sodai/core/theme/app_colors.dart';
 import 'package:amar_sodai/core/utls/dummy_data.dart';
+import 'package:amar_sodai/features/common/presentation/widgets/product_card.dart';
 import 'package:amar_sodai/features/dashboard/presentation/widgets/home_screen_category_card.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +53,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             TextButton(onPressed: () {}, child: Text("See All")),
           ],
         ),
+
         SizedBox(
           height: 115.h,
           child: ListView.builder(
@@ -74,6 +75,52 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             const Spacer(),
             TextButton(onPressed: () {}, child: Text("See All")),
           ],
+        ),
+        SizedBox(height: 8.h),
+        SizedBox(
+          height: 240.h,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: DummyData.categories.length > 5
+                ? 5
+                : DummyData.categories.length,
+            separatorBuilder: (context, index) {
+              return Padding(padding: EdgeInsets.only(right: 12));
+            },
+            itemBuilder: (context, index) => ProductCard(
+              colorIndex: index % 4,
+              item: DummyData.categories[index],
+              onTap: () {},
+            ),
+          ),
+        ),
+        SizedBox(height: 12.h),
+        Row(
+          children: [
+            Text("Recomanded", style: Theme.of(context).textTheme.titleLarge),
+            const Spacer(),
+            TextButton(onPressed: () {}, child: Text("See All")),
+          ],
+        ),
+        SizedBox(height: 8.h),
+        SizedBox(
+          height: 240.h,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: DummyData.categories.length > 5
+                ? 5
+                : DummyData.categories.length,
+            separatorBuilder: (context, index) {
+              return Padding(padding: EdgeInsets.only(right: 12));
+            },
+            itemBuilder: (context, index) {
+              return ProductCard(
+                colorIndex: index % 4,
+                item: DummyData.categories.reversed.toList()[index],
+                onTap: () {},
+              );
+            },
+          ),
         ),
       ],
     );
