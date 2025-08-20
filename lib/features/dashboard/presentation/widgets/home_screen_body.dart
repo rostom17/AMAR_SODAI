@@ -45,9 +45,14 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             effect: const WormEffect(),
           ),
         ),
-        SizedBox(height: 16.h),
-        Text("Categories", style: Theme.of(context).textTheme.titleLarge),
-        SizedBox(height: 16.h),
+        SizedBox(height: 12.h),
+        Row(
+          children: [
+            Text("Categories", style: Theme.of(context).textTheme.titleLarge),
+            const Spacer(),
+            TextButton(onPressed: () {}, child: Text("See All")),
+          ],
+        ),
         SizedBox(
           height: 115.h,
           child: ListView.builder(
@@ -62,16 +67,12 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             },
           ),
         ),
-        SizedBox(height: 16.h),
+        SizedBox(height: 12.h),
         Row(
           children: [
             Text("Best Deals", style: Theme.of(context).textTheme.titleLarge),
             const Spacer(),
-            TextButton(
-              
-              onPressed: () {},
-              child: Text("See All"),
-            ),
+            TextButton(onPressed: () {}, child: Text("See All")),
           ],
         ),
       ],

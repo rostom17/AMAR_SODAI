@@ -27,6 +27,8 @@ class AppTheme {
           textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
         ),
       ),
+
+      cardTheme: CardThemeData(color: AppColors.primaryShade),
     );
   }
 

@@ -1,8 +1,10 @@
 import 'package:amar_sodai/core/constants/app_strings.dart';
+import 'package:amar_sodai/core/theme/app_colors.dart';
 import 'package:amar_sodai/features/dashboard/presentation/bloc/bottom_nav_cubit.dart';
 import 'package:amar_sodai/features/dashboard/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavWidget extends StatelessWidget {
   BottomNavWidget({super.key});
@@ -68,8 +70,14 @@ class BottomNavWidget extends StatelessWidget {
   }) {
     final bool isSelected = itemIndex == currentIndex;
     return BottomNavigationBarItem(
-      icon: ImageIcon(
-        AssetImage(isSelected ? selectedIconPath : unSelectedIconpath,), 
+      icon: SvgPicture.asset(
+        isSelected ? selectedIconPath : unSelectedIconpath,
+        height: 24,
+        width: 24,
+        colorFilter: ColorFilter.mode(
+          isSelected ? AppColors.backgroundColor2 : Colors.grey.shade900,
+          BlendMode.srcIn,
+        ),
       ),
       label: label,
     );
